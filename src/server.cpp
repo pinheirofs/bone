@@ -2,19 +2,15 @@
 
 namespace bone {
 
-Server::Server() : type(UNDEFINED), status(STOPED) {
-}
-
-void Server::setType(const ServerType type) {
-    this->type = type;
+Server::Server() : status(STOPED) {
 }
 
 ServerStatus Server::getStatus() const {
-    return this->status;
+    return status;
 }
 
 void Server::start() {
-
+    status = ServerStatus::RUNNING;
 }
 
 } // namespace bone

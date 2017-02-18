@@ -27,3 +27,12 @@
 *.exe
 *.out
 *.app
+
+# build directories
+build-*
+
+# backup files
+*.swp
+
+# IDE configurations
+*.user

@@ -4,7 +4,6 @@ namespace bone {
 
 class Reciver {
 public:
-    virtual void start() = 0;
 };
 
 }
