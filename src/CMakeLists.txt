@@ -7,8 +7,8 @@ set(CMAKE_CXX_FLAGS "-std=c++14 -Wall")
 include_directories(${PROJECT_SOURCE_DIR})
 
 add_library(bone
-reciver.cpp
-server.cpp
+        socket_reciver.cpp
+        server.cpp
 )
 
 enable_testing()

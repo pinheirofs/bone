@@ -10,7 +10,13 @@ ServerStatus Server::getStatus() const {
 }
 
 void Server::start() {
+    status = ServerStatus::STARTING;
+
     status = ServerStatus::RUNNING;
+}
+
+void Server::setReciver(const SocketReciver reciver) {
+
 }
 
 } // namespace bone

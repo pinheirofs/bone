@@ -1,7 +1,12 @@
-add_executable(init_status_test init_status_test.cpp)
-target_link_libraries(init_status_test bone)
-add_test("server_status_init" init_status_test)
+add_executable(server_init_status_test server_init_status_test.cpp)
+target_link_libraries(server_init_status_test bone)
+add_test("server_status_init" server_init_status_test)
 
-add_executable(start_status_test start_status_test.cpp)
-target_link_libraries(start_status_test bone)
-add_test("server_status_start" start_status_test)
+add_executable(server_start_status_test server_start_status_test.cpp)
+target_link_libraries(server_start_status_test bone)
+add_test("server_status_start" server_start_status_test)
+
+add_executable(socket_reciver_validation_test socket_reciver_validation_test.cpp)
+target_link_libraries(socket_reciver_validation_test bone)
+add_test("socket_reciver_validation-OK" socket_reciver_validation_test true 1234)
+add_test("socket_reciver_validation-invalid_port" socket_reciver_validation_test false 0)

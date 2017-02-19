@@ -1,6 +1,8 @@
 #ifndef SERVER_HPP
 #define SERVER_HPP
 
+#include <socket_reciver.hpp>
+
 namespace bone {
 
 /*!
@@ -38,6 +40,12 @@ public:
      * messages.
      */
     void start();
+
+    /*!
+     * \brief Define de reciver of server.
+     * \param reciver the reciver.
+     */
+    void setReciver(const SocketReciver reciver);
 
     /*!
      * \brief return the status of server.
