@@ -1,6 +1,8 @@
 #ifndef SERVER_HPP
 #define SERVER_HPP
 
+#include <memory>
+
 #include <socket_reciver.hpp>
 
 namespace bone {
@@ -45,7 +47,7 @@ public:
      * \brief Define de reciver of server.
      * \param reciver the reciver.
      */
-    void setReciver(const SocketReciver reciver);
+    void setReciver(const std::shared_ptr<SocketReciver> reciver);
 
     /*!
      * \brief return the status of server.
@@ -54,7 +56,10 @@ public:
     ServerStatus getStatus() const;
 
 private:
+    bool isValid() const;
+
     ServerStatus status;
+    std::shared_ptr<SocketReciver> reciver;
 
 }; // class Server
 
