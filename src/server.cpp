@@ -12,6 +12,8 @@ ServerStatus Server::getStatus() const {
 bool Server::isValid() const {
     if (reciver == nullptr) {
         return false;
+    } else if (!reciver->isValid()) {
+        return false;
     } else if (status == ServerStatus::INVALID) {
         return false;
     }

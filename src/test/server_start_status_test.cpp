@@ -61,6 +61,7 @@ int main(const int argc, const char* argv[]) {
         shared_ptr<SocketReciver> reciver(new SocketReciver);
 
         unsigned int port = 0;
+        stream.clear();
         stream << argv[argIndex];
         stream >> port;
         argIndex++;
